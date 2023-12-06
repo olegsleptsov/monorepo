@@ -3,19 +3,19 @@ import React from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import Placeholder from '../components/Placeholder';
 
-const Upcoming = React.lazy(() =>
-  Federated.importModule('booking', './UpcomingScreen'),
+const FastBooking = React.lazy(() =>
+  Federated.importModule('booking', './FastBookingScreen'),
 );
 
-const UpcomingScreen = () => {
+const FastBookingScreen = () => {
   return (
     <ErrorBoundary name="UpcomingScreen">
       <React.Suspense
         fallback={<Placeholder label="Booking" icon="calendar" />}>
-        <Upcoming />
+        <FastBooking />
       </React.Suspense>
     </ErrorBoundary>
   );
 };
 
-export default UpcomingScreen;
+export default FastBookingScreen;

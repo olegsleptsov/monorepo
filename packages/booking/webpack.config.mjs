@@ -244,7 +244,7 @@ export default env => {
          */
         exposes: {
           './App': './src/navigation/MainNavigator',
-          './UpcomingScreen': './src/screens/UpcomingScreen',
+          './FastBookingScreen': './src/screens/FastBookingScreen',
         },
         /**
          * Shared modules are shared in the share scope.

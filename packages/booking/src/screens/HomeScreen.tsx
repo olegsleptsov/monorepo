@@ -83,7 +83,7 @@ const HomeScreen = ({navigation}: Props) => {
         </Text>
         <Button
           mode="contained-tonal"
-          onPress={() => navigation.navigate('Upcoming')}>
+          onPress={() => navigation.navigate('FastBooking')}>
           See All
         </Button>
       </View>
