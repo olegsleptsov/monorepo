@@ -79,6 +79,9 @@ const renderDivider = () => <Divider style={styles.divider} />;
 const HomeScreen = ({navigation}: Props) => {
   return (
     <ScrollView style={styles.container}>
+      <View style={styles.platformHeader}>
+        <Text>Это адаптация приложения для платформы</Text>
+      </View>
       <View style={styles.header}>
         <Text variant="titleLarge" style={styles.headerTitle}>
           Upcoming Appointments
@@ -165,6 +168,10 @@ const styles = StyleSheet.create({
     padding: 16,
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  platformHeader: {
+    width: '100%',
+    backgroundColor: 'tomato',
   },
   headerTitle: {
     flex: 1,
