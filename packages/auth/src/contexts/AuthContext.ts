@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AuthContext = React.createContext({
-  signIn: () => {},
+  signIn: (tenant: string) => {},
   signOut: () => {},
   signUp: () => {},
 });

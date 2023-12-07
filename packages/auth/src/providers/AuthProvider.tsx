@@ -53,9 +53,11 @@ const AuthProvider = ({
 
   const authContext = React.useMemo(
     () => ({
-      signIn: async () => {
+      signIn: async (tenant: string) => {
         try {
-          await AuthService.shared.setCredentials('dummy-auth-token');
+          const randomToken = `${Math.random() * 10000000}`;
+          await AuthService.shared.setCredentials(randomToken);
+          await AuthService.shared.setTenant(tenant);
         } catch (e) {
           // Handle error
         }
@@ -65,6 +67,7 @@ const AuthProvider = ({
       signOut: async () => {
         try {
           await AuthService.shared.removeCredentials();
+          await AuthService.shared.removeTenant();
         } catch (e) {
           // Handle error
         }
@@ -73,7 +76,8 @@ const AuthProvider = ({
       },
       signUp: async () => {
         try {
-          await AuthService.shared.setCredentials('dummy-auth-token');
+          const randomToken = `${Math.random() * 10000000}`;
+          await AuthService.shared.setCredentials(randomToken);
         } catch (e) {
           // Handle error
         }

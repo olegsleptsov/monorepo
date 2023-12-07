@@ -1,11 +1,7 @@
 import React from 'react';
 import {StyleSheet, View, Text, Alert} from 'react-native';
 import {Button} from 'react-native-paper';
-
-const getRandomNumber = (min: number, max: number): number => {
-  const randomNumber = Math.random() * (max - min) + min;
-  return Math.floor(randomNumber);
-};
+import {getRandomNumber} from '../utils/utils';
 
 const FastBookingScreen = ({}) => {
   const createBooking = () => {
